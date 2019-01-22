@@ -1,0 +1,23 @@
+{
+  "name": "download-youtube",
+  "version": "1.0.0",
+  "description": "YouTube downloader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "youtube",
+    "download"
+  ],
+  "author": "Luis Sacristán",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/displaynone/download-youtube.git"
+  },
+  "bugs": {
+    "url": "https://github.com/displaynone/download-youtube/issues"
+  },
+  "homepage": "https://github.com/displaynone/download-youtube#readme"
+}
