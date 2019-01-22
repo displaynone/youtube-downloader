@@ -1,5 +1,5 @@
 {
-  "name": "download-youtube",
+  "name": "youtube-downloader-links",
   "version": "1.0.0",
   "description": "YouTube downloader",
   "main": "index.js",
@@ -14,10 +14,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/displaynone/download-youtube.git"
+    "url": "git+https://github.com/displaynone/youtube-downloader.git"
   },
   "bugs": {
-    "url": "https://github.com/displaynone/download-youtube/issues"
+    "url": "https://github.com/displaynone/youtube-downloader/issues"
   },
-  "homepage": "https://github.com/displaynone/download-youtube#readme"
+  "homepage": "https://github.com/displaynone/youtube-downloader#readme"
 }
