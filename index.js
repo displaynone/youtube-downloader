@@ -42,7 +42,9 @@ class YoutubeDownloader {
       if ( params.has( 'url_encoded_fmt_stream_map' ) ) {
         params.get( 'url_encoded_fmt_stream_map' ).split( ',' ).forEach( map => {
           const mapParams = new url.URLSearchParams( map );
-          result.push( [... mapParams] );
+          const stream = {};
+          [... mapParams.entries()].forEach( item => stream[item[0]] = item[1] );
+          result.push( stream );
         } );
       }
       return result;
