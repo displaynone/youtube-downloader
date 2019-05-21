@@ -21,16 +21,16 @@ downloader.getVideoInfo( 'xxxxxxxxx' )
 And the result is:
 
 ```json
-[ { quality: 'hd720',
-    type: 'video/mp4; codecs="avc1.64001F, mp4a.40.2"',
-    url: 'https://r3---sn-h5q7kned.googlevideo.com/videoplayback?.....',
-    itag: '22' },
-  { quality: 'medium',
-    type: 'video/webm; codecs="vp8.0, vorbis"',
-    url: 'https://r3---sn-h5q7kned.googlevideo.com/videoplayback?.....',
-    itag: '43' },
-  { quality: 'medium',
-    type: 'video/mp4; codecs="avc1.42001E, mp4a.40.2"',
-    url: 'https://r3---sn-h5q7kned.googlevideo.com/videoplayback?......',
-    itag: '18' } ]
+[ { "quality": "hd720",
+    "type": "video/mp4; codecs='avc1.64001F, mp4a.40.2'",
+    "url": "https://r3---sn-h5q7kned.googlevideo.com/videoplayback?.....",
+    "itag": "22" },
+  { "quality": "medium",
+    "type": "video/webm; codecs='vp8.0, vorbis'",
+    "url": "https://r3---sn-h5q7kned.googlevideo.com/videoplayback?.....",
+    "itag": "43" },
+  { "quality": "medium",
+    "type": "video/mp4; codecs='avc1.42001E, mp4a.40.2'",
+    "url": "https://r3---sn-h5q7kned.googlevideo.com/videoplayback?......",
+    "itag": "18" } ]
 ```
