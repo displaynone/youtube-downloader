@@ -14,7 +14,7 @@ The following example gets the stream files of a video:
 const YoutubeDownloader = require('./youtube-downloader');
 
 const downloader = new YoutubeDownloader();
-downloader.getVideoInfo( 'xxxxxxxxx' )
+downloader.getVideoInfo( '/* Video URL */' )
   .then( response => console.log( response ) );
 ```
 
