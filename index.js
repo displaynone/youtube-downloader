@@ -15,6 +15,7 @@
  */
 const https = require( 'https' );
 const url = require( 'url' );
+const path = require( 'path' );
 
 const YOUTUBE_INFO_URL = 'https://www.youtube.com/get_video_info?video_id=';
 
@@ -35,7 +36,10 @@ const fetchData = ( url, cb ) => {
 
 class YoutubeDownloader {
 
-  getVideoInfo( id ) {
+  getVideoInfo( videoURL ) {
+    var parsed = url.parse(videoURL);
+    var a = parsed.query.split("?");
+    var id = a[0].slice(2,a[0].length);
     return fetchData( `${ YOUTUBE_INFO_URL }${ id }`, response => {
       const result = [];
       const params = new url.URLSearchParams( response );
