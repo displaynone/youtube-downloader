@@ -36,10 +36,7 @@ const fetchData = ( url, cb ) => {
 
 class YoutubeDownloader {
 
-  getVideoInfo( videoURL ) {
-    var parsed = url.parse(videoURL);
-    var a = parsed.query.split("?");
-    var id = a[0].slice(2,a[0].length);
+  getVideoInfo( id ) {
     return fetchData( `${ YOUTUBE_INFO_URL }${ id }`, response => {
       const result = [];
       const params = new url.URLSearchParams( response );
@@ -53,6 +50,15 @@ class YoutubeDownloader {
       }
       return result;
     } );
+  }
+
+  getVideoInfoByURL( link ){
+    link = decodeURIComponent(link)+ " ";
+    var id = link.match(/[v][\/|=|%]([a-zA-Z-\d]+)[&|\?|\s]/) || link.match(/youtu.be\/([A-Za-z-\d]+)/) || link.match(/embed\/([A-Za-z-\d]+)/);
+    if(id) id = id[1];
+    else id = "";
+    console.log(id);
+    return this.getVideoInfo(id);
   }
 
 }
