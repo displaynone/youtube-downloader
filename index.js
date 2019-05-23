@@ -15,7 +15,6 @@
  */
 const https = require( 'https' );
 const url = require( 'url' );
-const path = require( 'path' );
 
 const YOUTUBE_INFO_URL = 'https://www.youtube.com/get_video_info?video_id=';
 
