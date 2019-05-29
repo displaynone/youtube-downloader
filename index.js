@@ -52,13 +52,13 @@ class YoutubeDownloader {
   }
 
   getVideoInfoByURL( link ){
-    link = decodeURIComponent(link)+ ' ';
-    let id = link.match(/[v][\/|=|%]([a-zA-Z-\d]+)[&|?|\s]/) || 
-    link.match(/youtu.be\/([A-Za-z-\d]+)/) || 
-    link.match(/embed\/([A-Za-z-\d]+)/);
-    if(id) id = id[1];
-    else id = '';
-    return this.getVideoInfo(id);
+    link = decodeURIComponent( link );
+    const id = link.match( /[v][\/|=|%]([a-zA-Z-_\d]+)[&|?|\s]/ ) ||
+      link.match( /youtu.be\/([A-Za-z-_\d]+)/ ) ||
+      link.match( /embed\/([A-Za-z-_\d]+)/ );
+    return Array.isArray( id ) && id.length === 2 ?
+      this.getVideoInfo( id[ 1 ] ) :
+      null;
   }
 
 }
