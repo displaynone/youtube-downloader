@@ -14,23 +14,32 @@ The following example gets the stream files of a video:
 const YoutubeDownloader = require('./youtube-downloader');
 
 const downloader = new YoutubeDownloader();
-downloader.getVideoInfo( 'xxxxxxxxx' )
+downloader.getVideoInfo( '/* Video ID */' )
   .then( response => console.log( response ) );
 ```
+#OR
+```javascript
+const YoutubeDownloader = require('./youtube-downloader');
+
+const downloader = new YoutubeDownloader();
+downloader.getVideoInfoByURL( '/* Video URL */' )
+  .then( response => console.log( response ) );
+```
+
 
 And the result is:
 
 ```json
-[ { quality: 'hd720',
-    type: 'video/mp4; codecs="avc1.64001F, mp4a.40.2"',
-    url: 'https://r3---sn-h5q7kned.googlevideo.com/videoplayback?.....',
-    itag: '22' },
-  { quality: 'medium',
-    type: 'video/webm; codecs="vp8.0, vorbis"',
-    url: 'https://r3---sn-h5q7kned.googlevideo.com/videoplayback?.....',
-    itag: '43' },
-  { quality: 'medium',
-    type: 'video/mp4; codecs="avc1.42001E, mp4a.40.2"',
-    url: 'https://r3---sn-h5q7kned.googlevideo.com/videoplayback?......',
-    itag: '18' } ]
+[ { "quality": "hd720",
+    "type": "video/mp4; codecs='avc1.64001F, mp4a.40.2'",
+    "url": "https://r3---sn-h5q7kned.googlevideo.com/videoplayback?.....",
+    "itag": "22" },
+  { "quality": "medium",
+    "type": "video/webm; codecs='vp8.0, vorbis'",
+    "url": "https://r3---sn-h5q7kned.googlevideo.com/videoplayback?.....",
+    "itag": "43" },
+  { "quality": "medium",
+    "type": "video/mp4; codecs='avc1.42001E, mp4a.40.2'",
+    "url": "https://r3---sn-h5q7kned.googlevideo.com/videoplayback?......",
+    "itag": "18" } ]
 ```

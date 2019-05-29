@@ -51,6 +51,16 @@ class YoutubeDownloader {
     } );
   }
 
+  getVideoInfoByURL( link ){
+    link = decodeURIComponent(link)+ ' ';
+    let id = link.match(/[v][\/|=|%]([a-zA-Z-\d]+)[&|?|\s]/) || 
+    link.match(/youtu.be\/([A-Za-z-\d]+)/) || 
+    link.match(/embed\/([A-Za-z-\d]+)/);
+    if(id) id = id[1];
+    else id = '';
+    return this.getVideoInfo(id);
+  }
+
 }
 
 module.exports = YoutubeDownloader;
